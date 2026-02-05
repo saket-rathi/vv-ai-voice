@@ -50,8 +50,11 @@ with gr.Blocks() as demo:
         outputs=output_audio
     )
 
+# Keep all your other code the same...
+
+# Change this part
+app = demo
 
 if __name__ == "__main__":
-    # Render provides a PORT environment variable
     port = int(os.environ.get("PORT", 7860))
     demo.launch(server_name="0.0.0.0", server_port=port)
