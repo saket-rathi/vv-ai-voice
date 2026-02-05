@@ -56,5 +56,13 @@ with gr.Blocks() as demo:
 app = demo
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))
-    demo.launch(server_name="0.0.0.0", server_port=port)
+    # Render's default is 10000, but we use their PORT variable to be safe
+    # We MUST bind to 0.0.0.0
+    port = int(os.environ.get("PORT", 10000))
+    
+    print(f"Starting app on port {port}...")
+    demo.launch(
+        server_name="0.0.0.0", 
+        server_port=port,
+        show_error=True
+    )
