@@ -6,7 +6,7 @@ from gradio_client import Client, handle_file
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 # Initialize the client using that variable
-client = Client("devignite/vibe-voice-custom-voices-api", token=HF_TOKEN)
+client = Client("saketrathi111/vibe-voice-custom-voices-api", token=HF_TOKEN)
 
 def generate_voice(text, audio_path):
     # The API requires 4 speaker paths. 
